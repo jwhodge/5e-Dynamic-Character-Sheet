@@ -1,0 +1,326 @@
+/* font imports */
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Kanit:wght@300&display=swap");
+
+/* Colours */
+:root {
+  /* Dark Mode */
+  --dm-bkg-main: #121212;
+  --dm-bkg-invert: #dee5e5;
+  --dm-text-primary: #dee5e5;
+  --dm-text-invert: #121212;
+  --dm-colour-primary: #9b1d20;
+  --dm-colour-secondary: #6a7152;
+  --dm-accent-primary: #0f6ebd;
+  --dm-base-shade: #242424ab;
+  --dm-secondary-shade: #2b2b2bab;
+  --dm-background-image: url("challenger-stands-front-spooky-castle-illustration.jpg");
+
+  /* Light Mode */
+  --lm-bkg-main: #dee5e5;
+  --lm-bkg-invert: #121212;
+  --lm-text-primary: #121212;
+  --lm-text-invert: #dee5e5;
+  --lm-colour-primary: #0f6ebd;
+  --lm-colour-secondary: #6a7152;
+  --lm-accent-primary: #9b1d20;
+  --lm-base-shade: #dbdbdbde;
+  --lm-secondary-shade: #cacacade;
+  --lm-background-image: url("118Z_2012.w017.n001.334B.p15.334.jpg");
+
+  /* Default Mode */
+  --bkg-main: var(--dm-bkg-main);
+  --bkg-invert: var(--dm-bkg-invert);
+  --text-primary: var(--dm-text-primary);
+  --text-invert: var(--dm-text-invert);
+  --colour-primary: var(--dm-colour-primary);
+  --colour-secondary: var(--dm-colour-secondary);
+  --accent-primary: var(--dm-accent-primary);
+  --base-shade: var(--dm-base-shade);
+  --secondary-shade: var(--dm-secondary-shade);
+  --background-image: var(--dm-background-image);
+}
+
+.light {
+  /* Switched Mode */
+  --bkg-main: var(--lm-bkg-main);
+  --bkg-invert: var(--lm-bkg-invert);
+  --text-primary: var(--lm-text-primary);
+  --text-invert: var(--lm-text-invert);
+  --colour-primary: var(--lm-colour-primary);
+  --colour-secondary: var(--lm-colour-secondary);
+  --accent-primary: var(--lm-accent-primary);
+  --base-shade: var(--lm-base-shade);
+  --secondary-shade: var(--lm-secondary-shade);
+  --background-image: var(--lm-background-image);
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Kanit", sans-serif;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 {
+  margin: 8px 0;
+}
+
+h2,
+h3 {
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+li {
+  margin: 0 0 8px 15px;
+}
+
+/* Basic Text Formats */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Aboreto", cursive;
+  color: var(--text-primary);
+}
+
+/* Body format */
+body {
+  background: center no-repeat var(--background-image);
+  color: var(--text-primary);
+}
+
+/* Main Sheet Background */
+.sheet-container--desktop {
+  width: clamp(900px, 60%, 1200px);
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Sheet Layout */
+.sheet-layout--desktop {
+  width: auto;
+  height: auto;
+
+  display: grid;
+  grid:
+    "character-information character-information character-information character-information rest-settings" 1fr
+    "ability-scores ability-scores ability-scores hit-points hit-points" 1fr
+    "skills saving-throws action-combat-features action-combat-features action-combat-features" 1fr
+    "skills saving-throws action-combat-features action-combat-features action-combat-features" 1fr
+    "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
+    "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
+    "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
+    "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
+    / 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.character-information,
+.rest-settings,
+.ability-scores,
+.hit-points,
+.skills,
+.saving-throws,
+.action-combat-features,
+.prof-passive {
+  border: 1px solid var(--colour-primary);
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--secondary-shade);
+}
+
+.character-information {
+  grid-area: character-information;
+  display: grid;
+  grid:
+    "character-image character-name character-name character-name display-settings" 2fr
+    "character-image character-race character-race  . ." 1fr
+    "character-image character-class character-class . character-level" 1fr
+    / 1fr 1fr 1fr 1fr 1fr;
+  gap: 4px;
+}
+.rest-settings {
+  grid-area: rest-settings;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+.ability-scores {
+  grid-area: ability-scores;
+  display: flex;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+.hit-points {
+  grid-area: hit-points;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+.skills {
+  grid-area: skills;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+.saving-throws {
+  grid-area: saving-throws;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: space-evenly;
+}
+.action-combat-features {
+  grid-area: action-combat-features;
+}
+.prof-passive {
+  grid-area: prof-passive;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: space-evenly;
+}
+
+/* Character Header CSS */
+.character-image {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  grid-area: character-image;
+  border-radius: 5px;
+  border: var(--colour-primary) 1px solid;
+  background-color: var(--base-shade);
+  background: center / contain no-repeat
+    url("Screenshot from 2023-02-07 19-44-03.png");
+}
+.character-name {
+  grid-area: character-name;
+}
+.character-race {
+  grid-area: character-race;
+}
+.character-level {
+  grid-area: character-level;
+}
+.character-class {
+  grid-area: character-class;
+}
+.display-settings {
+  grid-area: display-settings;
+}
+
+.character-class,
+.character-image,
+.character-level,
+.character-name,
+.character-race,
+.display-settings {
+  text-align: left;
+}
+
+/* Shared colour attributes */
+.ability-score__container,
+.skill__container,
+.saving-throw__container,
+.prof-passive__container,
+.rest-settings__container,
+.hit-points__container {
+  border: var(--colour-primary) 1px solid;
+  border-radius: 5px;
+  background-color: var(--base-shade);
+}
+
+/* Hit Point CSS */
+.hit-points__container {
+  width: calc(1 / 3 * 100%);
+  position: relative;
+}
+
+/* Ability scores CSS */
+.ability-score__container {
+  width: calc(1 / 6 * 100%);
+  position: relative;
+}
+
+/* Box formatting */
+.ability-score__value,
+.hit-points__max,
+.hit-points__die-type {
+  width: 33%;
+  height: 33%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: var(--colour-primary) 1px solid;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 1px;
+  font-size: 1.2rem;
+  background-color: var(--secondary-shade);
+}
+
+.ability-score__bonus,
+.hit-points__current,
+.hit-points__temporary,
+.hit-points__die-used {
+  width: 33%;
+  height: 33%;
+  position: absolute;
+  top: 25%;
+  right: 33%;
+  margin: 2px;
+  padding: 1px;
+  font-size: 1.7rem;
+}
+
+.hit-points__die-type--label,
+.hit-points__max--label {
+  width: 50%;
+  height: 33%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 2px;
+  padding: 1px;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+/* Skills CSS */
+.skill__container {
+  height: calc(1 / 18 * 100%);
+}
+
+/* Saving Throws */
+.saving-throw__container {
+  height: calc(1 / 6 * 100%);
+}
+
+/* Passive and Prof */
+.prof-passive__container {
+  height: calc(1 / 7 * 100%);
+}
