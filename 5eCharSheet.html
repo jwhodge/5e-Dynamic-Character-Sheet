@@ -37,51 +37,100 @@
         <div class="ability-scores">
           <div class="ability-score__container" id="str">
             STR
-            <div class="ability-score__bonus">+4</div>
-            <div class="ability-score__value">18</div>
+            <div class="score-box">+4</div>
+            <div class="sub-box">18</div>
           </div>
           <div class="ability-score__container" id="dex">
             DEX
-            <div class="ability-score__bonus">+1</div>
-            <div class="ability-score__value">12</div>
+            <div class="score-box">+1</div>
+            <div class="sub-box">12</div>
           </div>
           <div class="ability-score__container" id="con">
             CON
-            <div class="ability-score__bonus">+3</div>
-            <div class="ability-score__value">16</div>
+            <div class="score-box">+3</div>
+            <div class="sub-box">16</div>
           </div>
           <div class="ability-score__container" id="int">
             INT
-            <div class="ability-score__bonus">-1</div>
-            <div class="ability-score__value">9</div>
+            <div class="score-box">-1</div>
+            <div class="sub-box">9</div>
           </div>
           <div class="ability-score__container" id="wis">
             WIS
-            <div class="ability-score__bonus">0</div>
-            <div class="ability-score__value">10</div>
+            <div class="score-box">0</div>
+            <div class="sub-box">10</div>
           </div>
           <div class="ability-score__container" id="cha">
             CHA
-            <div class="ability-score__bonus">+1</div>
-            <div class="ability-score__value">13</div>
+            <div class="score-box">+1</div>
+            <div class="sub-box">13</div>
+          </div>
+        </div>
+        <div class="saving-throws">
+          <div class="saving-throw__container" id="str-save">
+            STR save
+            <div class="score-box">+6</div>
+            <div class="sub-box saving-throw__proficiency">*</div>
+          </div>
+          <div class="saving-throw__container" id="dex-save">
+            DEX save
+            <div class="score-box">+1</div>
+            <div class="sub-box saving-throw__proficiency"></div>
+          </div>
+          <div class="saving-throw__container" id="con-save">
+            CON save
+            <div class="score-box">+5</div>
+            <div class="sub-box saving-throw__proficiency">*</div>
+          </div>
+          <div class="saving-throw__container" id="int-save">
+            INT save
+            <div class="score-box">-1</div>
+            <div class="sub-box saving-throw__proficiency"></div>
+          </div>
+          <div class="saving-throw__container" id="wis-save">
+            WIS save
+            <div class="score-box">0</div>
+            <div class="sub-box saving-throw__proficiency"></div>
+          </div>
+          <div class="saving-throw__container" id="cha-save">
+            CHA save
+            <div class="score-box">+1</div>
+            <div class="sub-box saving-throw__proficiency"></div>
           </div>
         </div>
         <div class="hit-points">
+          <div class="hit-points__container" id="armour-class">
+            AC
+            <div class="score-box">16</div>
+          </div>
+          <div class="hit-points__container" id="initiative">
+            Initiative
+            <div class="score-box">+1</div>
+          </div>
+          <div class="hit-points__container" id="speed">
+            Speed
+            <div class="score-box">30ft</div>
+          </div>
+          <div class="hit-points__container" id="proficiency-bonus">
+            Proficiency
+            <div class="score-box">+2</div>
+          </div>
           <div class="hit-points__container" id="hp-current">
             Current
-            <div class="hit-points__current">8</div>
-            <div class="hit-points__max--label">Max:</div>
-            <div class="hit-points__max">13</div>
+            <div class="score-box">10</div>
+          </div>
+          <div class="hit-points__container" id="hp-max">
+            Max
+            <div class="score-box">13</div>
           </div>
           <div class="hit-points__container" id="hp-temp">
             Temp
-            <div class="hit-points__temporary">0</div>
+            <div class="score-box">0</div>
           </div>
           <div class="hit-points__container" id="hp-dice">
-            Die / Used
-            <div class="hit-points__die-used">0/1</div>
-            <div class="hit-points__die-type--label">Die:</div>
-            <div class="hit-points__die-type">D10</div>
+            Hit Die Use
+            <div class="score-box">0/1</div>
+            <div class="sub-box">D10</div>
           </div>
         </div>
         <div class="skills">
@@ -108,28 +157,17 @@
           <div class="skill__container" id="stealth">Stealth</div>
           <div class="skill__container" id="survival">Survival</div>
         </div>
-        <div class="saving-throws">
-          <div class="saving-throw__container" id="str-save">STR</div>
-          <div class="saving-throw__container" id="dex-save">DEX</div>
-          <div class="saving-throw__container" id="con-save">CON</div>
-          <div class="saving-throw__container" id="int-save">INT</div>
-          <div class="saving-throw__container" id="wis-save">WIS</div>
-          <div class="saving-throw__container" id="cha-save">CHA</div>
-        </div>
         <div class="action-combat-features">
           <h3>Combat Actions</h3>
         </div>
         <div class="prof-passive">
-          <div class="prof-passive__container" id="proficiency-bonus">
-            Proficiency Bonus
-          </div>
           <div class="prof-passive__container" id="passive-perception">
             Passive Perception (WIS)
           </div>
-          <div class="prof-passive__container" id="con-insight">
+          <div class="prof-passive__container" id="passive-insight">
             Passive Insight (INT)
           </div>
-          <div class="prof-passive__container" id="int-investigation">
+          <div class="prof-passive__container" id="passive-investigation">
             Passive Investigation (WIS)
           </div>
           <div class="prof-passive__container" id="armour-proficiency">

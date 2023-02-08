@@ -9,7 +9,7 @@
   --dm-text-primary: #dee5e5;
   --dm-text-invert: #121212;
   --dm-colour-primary: #9b1d20;
-  --dm-colour-secondary: #6a7152;
+  --dm-colour-secondary: #63080a;
   --dm-accent-primary: #0f6ebd;
   --dm-base-shade: #242424ab;
   --dm-secondary-shade: #2b2b2bab;
@@ -21,7 +21,7 @@
   --lm-text-primary: #121212;
   --lm-text-invert: #dee5e5;
   --lm-colour-primary: #0f6ebd;
-  --lm-colour-secondary: #6a7152;
+  --lm-colour-secondary: #a1c3df;
   --lm-accent-primary: #9b1d20;
   --lm-base-shade: #dbdbdbde;
   --lm-secondary-shade: #cacacade;
@@ -126,8 +126,9 @@ body {
   grid:
     "character-information character-information character-information character-information rest-settings" 1fr
     "ability-scores ability-scores ability-scores hit-points hit-points" 1fr
-    "skills saving-throws action-combat-features action-combat-features action-combat-features" 1fr
-    "skills saving-throws action-combat-features action-combat-features action-combat-features" 1fr
+    "saving-throws saving-throws saving-throws hit-points hit-points" 0.5fr
+    "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
+    "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
     "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
     "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
     "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
@@ -176,9 +177,12 @@ body {
 .hit-points {
   grid-area: hit-points;
   text-align: center;
-  display: flex;
+  display: grid;
+  grid:
+    "armour-class initiative speed proficiency-bonus" 1fr
+    "hp-current hp-max hp-temp hp-dice" 1fr
+    / 1fr 1fr 1fr 1fr;
   gap: 8px;
-  justify-content: space-evenly;
 }
 .skills {
   grid-area: skills;
@@ -190,8 +194,7 @@ body {
 .saving-throws {
   grid-area: saving-throws;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   justify-content: space-evenly;
 }
 .action-combat-features {
@@ -254,22 +257,9 @@ body {
   background-color: var(--base-shade);
 }
 
-/* Hit Point CSS */
-.hit-points__container {
-  width: calc(1 / 3 * 100%);
-  position: relative;
-}
-
-/* Ability scores CSS */
-.ability-score__container {
-  width: calc(1 / 6 * 100%);
-  position: relative;
-}
-
 /* Box formatting */
 .ability-score__value,
-.hit-points__max,
-.hit-points__die-type {
+.sub-box {
   width: 33%;
   height: 33%;
   position: absolute;
@@ -283,10 +273,7 @@ body {
   background-color: var(--secondary-shade);
 }
 
-.ability-score__bonus,
-.hit-points__current,
-.hit-points__temporary,
-.hit-points__die-used {
+.score-box {
   width: 33%;
   height: 33%;
   position: absolute;
@@ -310,6 +297,43 @@ body {
   text-align: right;
 }
 
+/* Hit Point & AC CSS */
+.hit-points__container {
+  position: relative;
+}
+
+#armour-class {
+  grid-area: armour-class;
+  background-color: var(--colour-secondary);
+}
+#initiative {
+  grid-area: initiative;
+}
+#speed {
+  grid-area: speed;
+}
+#proficiency-bonus {
+  grid-area: proficiency-bonus;
+}
+#hp-current {
+  grid-area: hp-current;
+}
+#hp-max {
+  grid-area: hp-max;
+}
+#hp-temp {
+  grid-area: hp-temp;
+}
+#hp-dice {
+  grid-area: hp-dice;
+}
+
+/* Ability scores CSS */
+.ability-score__container {
+  width: calc(1 / 6 * 100%);
+  position: relative;
+}
+
 /* Skills CSS */
 .skill__container {
   height: calc(1 / 18 * 100%);
@@ -317,10 +341,28 @@ body {
 
 /* Saving Throws */
 .saving-throw__container {
-  height: calc(1 / 6 * 100%);
+  width: calc(1 / 6 * 100%);
+  position: relative;
+}
+.saving-throw__proficiency {
+  background-color: var(--base-shade);
+  color: var(--accent-primary);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 1px 3px;
+  font-size: 1.2rem;
 }
 
 /* Passive and Prof */
 .prof-passive__container {
-  height: calc(1 / 7 * 100%);
+  height: calc(1 / 4 * 100%);
+}
+
+#passive-perception,
+#passive-insight,
+#passive-investigation {
+  height: calc(1 / 12 * 100%);
 }
