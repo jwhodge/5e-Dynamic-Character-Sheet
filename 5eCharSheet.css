@@ -70,11 +70,11 @@
 html {
   font-family: "Kanit", sans-serif;
   color: var(--text-primary);
-  font-size: 16px;
+  font-size: clamp(12px, calc(16 / 1920 * 100vw), 18px);
 }
 
 p {
-  font-size: 16px;
+  font-size: clamp(12px, calc(16 / 1920 * 100vw), 18px);
 }
 
 h1 {
@@ -111,7 +111,7 @@ body {
 
 /* Main Sheet Background */
 .sheet-container--desktop {
-  width: clamp(900px, 60%, 1200px);
+  width: clamp(800px, 60%, 1200px);
   margin: auto;
   padding: 5px;
   text-align: center;
@@ -127,7 +127,6 @@ body {
     "character-information character-information character-information character-information rest-settings" 1fr
     "ability-scores ability-scores ability-scores hit-points hit-points" 1fr
     "saving-throws saving-throws saving-throws hit-points hit-points" 0.5fr
-    "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
     "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
     "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
     "skills prof-passive action-combat-features action-combat-features action-combat-features" 1fr
@@ -179,8 +178,8 @@ body {
   text-align: center;
   display: grid;
   grid:
-    "armour-class initiative speed proficiency-bonus" 1fr
-    "hp-current hp-max hp-temp hp-dice" 1fr
+    "armour-class initiative hp-current hp-max" 1fr
+    "proficiency-bonus speed hp-temp hp-dice" 1fr
     / 1fr 1fr 1fr 1fr;
   gap: 8px;
 }
@@ -258,7 +257,6 @@ body {
 }
 
 /* Box formatting */
-.ability-score__value,
 .sub-box {
   width: 33%;
   height: 33%;
@@ -301,7 +299,6 @@ body {
 .hit-points__container {
   position: relative;
 }
-
 #armour-class {
   grid-area: armour-class;
   background-color: var(--colour-secondary);
@@ -344,16 +341,20 @@ body {
   width: calc(1 / 6 * 100%);
   position: relative;
 }
-.saving-throw__proficiency {
+.saving-throw__proficiency,
+#hit-die-type {
   background-color: var(--base-shade);
   color: var(--accent-primary);
+  border: none;
   position: absolute;
-  bottom: 0;
+  bottom: 3px;
   right: 0;
-  border-radius: 5px;
-  margin: 2px;
-  padding: 1px 3px;
-  font-size: 1.2rem;
+}
+
+#hit-die-type {
+  bottom: 0;
+  padding: 0 2px 0 0;
+  margin: 0;
 }
 
 /* Passive and Prof */
