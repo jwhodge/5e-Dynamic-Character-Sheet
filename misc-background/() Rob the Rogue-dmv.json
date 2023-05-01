@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "player_name": null,
+  "character": [
+    {
+      "passive_perception": 16,
+      "immunities": [],
+      "subrace": "Lightfoot",
+      "ac": 15,
+      "saving_throw_advantages": null,
+      "proficiency_bonus": "2",
+      "race": "Halfling",
+      "alignment": "Chaotic Good",
+      "experience": null,
+      "background": "Acolyte",
+      "equipment": [
+        {
+          "equipment": {
+            "pouch": {
+              "id": 17592306907281,
+              "quantity": 1,
+              "equipped?": true,
+              "background-starting-equipment?": true
+            },
+            "clothes-common": {
+              "id": 17592306907279,
+              "quantity": 1,
+              "equipped?": true,
+              "background-starting-equipment?": true
+            },
+            "arrow": {
+              "quantity": 20,
+              "equipped?": true
+            },
+            "piton": {
+              "quantity": 10,
+              "equipped?": true
+            },
+            "quiver": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "waterskin": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "candle": {
+              "quantity": 5,
+              "equipped?": true
+            },
+            "lantern-hooded": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "oil": {
+              "quantity": 2,
+              "equipped?": true
+            },
+            "thieves-tools": {
+              "id": 17592306907287,
+              "quantity": 1,
+              "equipped?": true,
+              "class-starting-equipment?": true
+            },
+            "incense": {
+              "id": 17592306907283,
+              "quantity": 5,
+              "equipped?": true,
+              "background-starting-equipment?": true
+            },
+            "rations-1-day-": {
+              "quantity": 5,
+              "equipped?": true
+            },
+            "rope-hempen": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "string": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "amulet": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "vestements": {
+              "id": 17592306907285,
+              "quantity": 1,
+              "equipped?": true,
+              "background-starting-equipment?": true
+            },
+            "prayer-book": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "tinderbox": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "hammer": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "bell": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "backpack": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "ball-bearings": {
+              "quantity": 1,
+              "equipped?": true
+            },
+            "crowbar": {
+              "quantity": 1,
+              "equipped?": true
+            }
+          },
+          "armor": {
+            "leather": {
+              "id": 17592306907313,
+              "quantity": 1,
+              "equipped?": true,
+              "class-starting-equipment?": true
+            }
+          },
+          "magic-armor": null,
+          "magic-items": null,
+          "weapons": [
+            [
+              "dagger",
+              {
+                "id": 17592306907258,
+                "quantity": 2,
+                "equipped?": true,
+                "class-starting-equipment?": true
+              }
+            ],
+            [
+              "rapier",
+              {
+                "quantity": 1,
+                "equipped?": true
+              }
+            ],
+            [
+              "shortbow",
+              {
+                "quantity": 5,
+                "equipped?": true
+              }
+            ]
+          ],
+          "magic-weapons": []
+        }
+      ],
+      "spells": [
+        {
+          "spellcasting_fields": "TO-DO Spells. um yah... it's a nightmare to pull spells and details"
+        }
+      ],
+      "damage_resistances": [],
+      "treasure": {
+        "gp": 15,
+        "treasure": ""
+      },
+      "abilities_bonuses": [
+        {
+          "abilities": {
+            "str": 10,
+            "dex": 18,
+            "con": 16,
+            "int": 12,
+            "wis": 14,
+            "cha": 16
+          },
+          "bonuses": {
+            "str": 0,
+            "dex": 4,
+            "con": 3,
+            "int": 1,
+            "wis": 2,
+            "cha": 3
+          }
+        }
+      ],
+      "image_url": null,
+      "damage_vulnerabilities": null,
+      "proficiencies": [
+        {
+          "all": "Tool Proficiencies: Thieves' Tools\n\nWeapon Proficiencies: Crossbow, hand; Longsword; Rapier; Shortsword; Simple\n\nArmor Proficiencies: Light\n\nLanguage Proficiencies: Celestial; Common; Halfling; Infernal",
+          "tool": "Thieves' Tools",
+          "weapon": "Crossbow, hand; Longsword; Rapier; Shortsword; Simple",
+          "armor": "Light",
+          "language": "Celestial; Common; Halfling; Infernal"
+        }
+      ],
+      "skills": {
+        "religion": "+3",
+        "animal-handling-check": false,
+        "persuasion": "+3",
+        "sleight-of-hand-check": false,
+        "religion-check": true,
+        "nature-check": false,
+        "investigation": "+3",
+        "performance-check": false,
+        "acrobatics": "+4",
+        "performance": "+3",
+        "perception": "+6",
+        "sleight-of-hand": "+4",
+        "medicine-check": false,
+        "investigation-check": true,
+        "survival": "+2",
+        "history": "+1",
+        "history-check": false,
+        "animal-handling": "+2",
+        "nature": "+1",
+        "deception": "+5",
+        "intimidation": "+3",
+        "arcana": "+1",
+        "athletics": "0",
+        "perception-check": true,
+        "intimidation-check": false,
+        "survival-check": false,
+        "insight-check": true,
+        "stealth-check": true,
+        "deception-check": true,
+        "athletics-check": false,
+        "persuasion-check": false,
+        "arcana-check": false,
+        "acrobatics-check": false,
+        "insight": "+4",
+        "medicine": "+2",
+        "stealth": "+8"
+      },
+      "characteristics": [
+        {
+          "factions_and_organizations": null,
+          "faction_image_url": null,
+          "eyes": null,
+          "age": null,
+          "sex": null,
+          "ideals": null,
+          "speed": 25,
+          "personality-trait-2": "",
+          "bonds": null,
+          "personality_trait_1": "",
+          "weight": null,
+          "hair": null,
+          "skin": null,
+          "height": null,
+          "character_backstory": null,
+          "flaws": null
+        }
+      ],
+      "save_bonuses": {
+        "str": 0,
+        "dex": 6,
+        "con": 3,
+        "int": 3,
+        "wis": 2,
+        "cha": 3
+      },
+      "character_name": "Rob the Rogue",
+      "attacks": {
+        "weapon-name-2": "Shortbow",
+        "weapon-attack-bonus-2": "+6",
+        "weapon-damage-1": "1d4+4 piercing",
+        "weapon-damage-3": "1d8+4 piercing",
+        "weapon-name-1": "Dagger",
+        "weapon-attack-bonus-3": "+6",
+        "attacks-and-spellcasting": "Number of Attacks: 1\n",
+        "weapon-name-3": "Rapier",
+        "weapon-damage-2": "1d6+4 piercing",
+        "weapon-attack-bonus-1": "+6"
+      },
+      "hp": [
+        {
+          "hp_current": null,
+          "hp_max": 17
+        }
+      ],
+      "initiative_bonus": 4,
+      "classes": {
+        "rogue": {
+          "class-name": "Rogue",
+          "class-level": 2,
+          "hit-die": 8
+        }
+      },
+      "condition_immunities": [],
+      "traits": {
+        "features-and-traits-2": "\n\n----------Bonus Actions----------\nCunning Action. As a bonus action you can Dash, Disengage or Hide (use once/turn).\n\n-----------Other Traits------------\nBrave. You have advantage on saves against being frightened.\n\nHalfling Nimbleness. Move through the space of larger creatures.\n\nLucky. Reroll 1s on d20.\n\nNaturally Stealthy. Hide behind creatures larger than you.\n\nShelter the Faithful. You and your companions can expect free healing at an establishment of your faith.\n\nSneak Attack. 1d6 extra damage on attack where you have advantage or another enemy of creature is within 5 ft. (use once/turn).\n\nThieves' Cant. Convey secret messages hidden in normal conversation."
+      }
+    }
+  ]
+}
